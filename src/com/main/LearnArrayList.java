@@ -1,71 +1,105 @@
 package com.main;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class LearnArrayList {
     public static void main(String[] args) {
         /*
-        ArrayList<String> sName = new ArrayList();
-        List<String> sName = new ArrayList();
+        * ArrayList / Dynamic Array:
+        * Implements List interface of collections framework.
+        * */
+
+        // Creating ArrayList:
+        /*
+        ArrayList<String> sName = new ArrayList<>();
+        List<String> sName = new ArrayList<>(); // create ArrayList using List interface
         */
 
         List<String> sName = new LinkedList<>();
-        // Automatic memory allocation
-        // Internal Array
+        /*
+        * Automatic memory allocation
+        * Internal array of size 10 created
+        * size n
+        *     n + n/2 + 1   when needed
+        * */
+        sName.add("Eve");
+        sName.add("Edwina");
+        sName.add("Edward");
+        System.out.println("ArrayList: " + sName);
 
-        sName.add("A");
-        System.out.println(sName);
-        // Internal array size 10 created
 
-        // size n
-        //     n + n/2 + 1   when needed
-
-        List<Integer> iList = new ArrayList();
+        // Basic operations:
+        ArrayList<Integer> iList = new ArrayList<>();
+        // Addition
         iList.add(1);
         iList.add(2);
         iList.add(3);
-        System.out.println(iList);
+        System.out.println("Integer ArrayList: " + iList);
 
-		/*
-		List<Integer> sList = new ArrayList();
-		sList.add(10);
-		sList.add(20);
-		System.out.println(sList);
+        iList.add(0, -1);  // Add at specified position
 
-		iList.remove(1);
-		System.out.println(iList);
+        // Add every element of a set to an ArrayList
+        HashSet<String> chars = new HashSet<>();
+        chars.add("a");
+        chars.add("e");
+        chars.add("i");
+        List<String> sArray = new ArrayList<>();
+        sArray.add("o");
 
-		iList.remove(Integer.valueOf(3));
-		System.out.println(iList);
+        sArray.addAll(chars);
+        System.out.println("ArrayList: " + sArray);
 
-		System.out.println(iList.get(0));
+        // Accessing items
+        int item = iList.get(0);  // return item at Index given
 
-		iList.addAll(sList);
-		iList.set(0, 10);
-		System.out.println(iList);
+        // Change ArrayList items
+        iList.set(0, 10);
 
-		iList.clear();
-		System.out.println(iList);
+        // Remove ArrayList items
+        int removed = iList.remove(1);
+        System.out.println("\nRemoved item: " + removed + " Updated ArrayList: " + iList);
 
-		//Time complexity O(n) add/remove
+        iList.remove(Integer.valueOf(3));
+		// iList.clear();
 
-		*/
+        /*
+        * Other Methods:
+        * size() : return size of arrayList
+        * sort() : sort arrayList
+        * clone() : create new arrayList with same items, size and capacity
+        * contains() : searches arrayList for specified item and return boolean result
+        * ensureCapacity() : specifies total items the arrayList can contain
+        * isEmpty()
+        * indexOf() : search item in arrayList and return index of item
+        * */
 
+
+        // Iteration:
 		/*
 		for (int i=0 ; i < iList.size() ; i++){
 			System.out.println("For "+ iList.get(i));
 		}
 
 		for (Integer i : iList) {
-			System.out.println("Foreach "+i);
+			System.out.println("Foreach " + i);
 		}
 
-		Iterator<Integer> it = iList.iterator();
-		while(it.hasNext()) {
-			System.out.println("Iterator "+it.next());
+		Iterator<Integer> iterate = iList.iterator();
+		while(iterate.hasNext()) {
+			System.out.print(iterate.next() + " ");
 		}
 		*/
+
+        // Array To ArrayList:
+        String[] arr = {"Hi", "There", "!"};
+        ArrayList<String> arrayToArrayList = new ArrayList<>(Arrays.asList(arr));
+        System.out.println("ArrayList: " + arrayToArrayList);
+        // ArrayList To String
+        String arrayListToString = arrayToArrayList.toString();
+        System.out.println("String: " + arrayListToString);
+        // ArrayList To Array
+        String[] arrayListToArray = arrayToArrayList.toArray(new String[0]);
+        for (String s : arrayListToArray)
+            System.out.print(s + " ");
     }
 }
