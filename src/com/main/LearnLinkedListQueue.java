@@ -20,11 +20,11 @@ public class LearnLinkedListQueue {
 
         //System.out.println(queue.poll());
         //System.out.println(queue.remove());
+
         queue.remove(2);  //Throw Exception
         System.out.println(queue);
 
-        int peek = queue.peek();
-        System.out.println("peek: " + peek);
+        System.out.println("peek: " + queue.peek());
         int element = queue.element();  //Throw Exception
         System.out.println("element: " + element);
 
