@@ -1,5 +1,6 @@
 package com.main;
 
+import java.util.Comparator;
 import java.util.Objects;
 
 public class Person implements Comparable<Person> {
@@ -43,4 +44,3 @@ public class Person implements Comparable<Person> {
         // To avoid this situation use Comparator
     }
 }
-
