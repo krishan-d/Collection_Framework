@@ -7,14 +7,13 @@ public class LearnSet {
 
 		/*
 		* No duplicate elements allowed
-		* Not Thread-safe
+		* Not Thread-safe/ Not synchronized
 		* Fail-Fast iterator
 		*
 		* HashSet:
 		* Time complexity: O(1) [add, contains, remove]
 		* Order: No Order
 		* Internal Implementation[DS]: backed by HashMap instance uses HashTable
-		* Not-synchronized
 		* 16 as initial size of HashTable
 		* extends AbstractSet class
 		*
@@ -27,9 +26,9 @@ public class LearnSet {
 		*
 		* TreeSet:
 		* Time complexity: O(log(n)) [add, contains, remove]
-		* Order: Sorted Order
+		* Order: Sorted Order [Ascending] or specified Comparator when initialized
 		* Internal Implementation: backed by NavigableMap and TreeMap by default
-		*
+		* extends AbstractSet class and implements NavigableSet interface
 		* */
 
 		Set<Integer> lhs = new LinkedHashSet<>();
