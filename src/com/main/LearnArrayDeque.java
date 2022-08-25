@@ -52,13 +52,14 @@ public class LearnArrayDeque {
         for (Iterator<String> itr = de_que.descendingIterator(); itr.hasNext();) System.out.println(itr.next());
         System.out.println();
 
+        //Using ArrayDeque class
         ArrayDeque<Integer> adq = new ArrayDeque<>();
-        try{
+        try {
             adq.add(5);
             adq.offer(23);
             adq.offerFirst(12);
             adq.offerLast(45);
-            adq.offer(26);
+            adq.add(26);
 
             System.out.println(adq + "\n");
 
