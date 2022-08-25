@@ -1,9 +1,6 @@
 package com.main;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.TreeMap;
-import java.util.HashMap;
+import java.util.*;
 
 public class LearnMap {
     public static void main(String[] args) {
@@ -17,6 +14,7 @@ public class LearnMap {
         HashMap is implemented as HashTable.
         No order is maintained[Any order] hence High performance
         O(1) Time complexity [get, put, containsKey, remove]
+        General purpose Map
 
         LinkedHashMap:
         implement Map interface.
@@ -31,6 +29,7 @@ public class LearnMap {
         No null keys
         */
 
+        //LinkedHashMap
         Map<Integer, String> map = new LinkedHashMap<>();
         map.put(0, "A");
         map.put(4, "Z");
@@ -38,8 +37,15 @@ public class LearnMap {
         map.put(6, "V");
 
         System.out.println("LinkedHashMap: " + map + "\n");
+        //TreeMap
         map = new TreeMap<>(map);
         System.out.println("TreeMap: " + map + "\n");
+
+        Map<Integer, String> map1 = new TreeMap<>(Comparator.reverseOrder()); //Specifying Comparator
+        map1.putAll(map);
+        System.out.println("TreeMap with Comparator: " + map1 + "\n");
+
+        //HashMap
         map = new HashMap<>(map);
         System.out.println("HashMap: " + map + "\n");
 
