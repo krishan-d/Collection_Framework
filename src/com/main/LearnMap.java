@@ -1,5 +1,6 @@
 package com.main;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class LearnMap {
@@ -49,6 +50,11 @@ public class LearnMap {
         map = new HashMap<>(map);
         System.out.println("HashMap: " + map + "\n");
 
+        //HashMap as synchronized
+        Map<Integer, String> synMap = Collections.synchronizedMap(map);
+        System.out.println("Synchronized HashMap: " + synMap + "\n");
+
+        //Operations...
         map.remove(4);
         System.out.println(map + "\n");
 
@@ -70,6 +76,23 @@ public class LearnMap {
 
         map.clear();
         System.out.println("clear: " + map + "\n");
+
+        /*
+        * Hashtable:
+        * Synchronized
+        * No Null values or keys
+        * Traversed by Enumerator and Iterator
+        * Enumerator is not fail-safe in Hashtable
+        * inherits Dictionary class
+        * */
+        Hashtable<Integer, String> hm = new Hashtable<>();
+        hm.put(1, "A");
+        hm.put(-1, "B");
+        hm.put(0, "C");
+        hm.put(2, "D");
+        hm.put(-2, "E");
+
+        for (Map.Entry<Integer, String> m : hm.entrySet()) System.out.println(m.getKey() + " : " + m.getValue());
 
     }
 }
