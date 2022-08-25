@@ -1,5 +1,6 @@
 package com.main;
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.HashMap;
@@ -10,42 +11,59 @@ public class LearnMap {
         /*
         Key-Value Pairs
         Unique Key
+
+        HashMap:
+        implement Map interface.
+        HashMap is implemented as HashTable.
+        No order is maintained[Any order] hence High performance
+        O(1) Time complexity [get, put, containsKey, remove]
+
+        LinkedHashMap:
+        implement Map interface.
+        LinkedHashMap is implemented as a Doubly-LinkedList buckets.
+        Order in which keys were inserted into Map.
+
+        TreeMap:
+        implement Map, NavigableMap and SortedMap interface.
+        TreeMap is implemented as Red-Black Tree.
+        Iterated according to the natural order or the Comparator specified while creation.
+        O(log(n)) Time complexity [get, put, containsKey, remove]
+        No null keys
         */
 
-        //Map<String,Integer> map = new HashMap<>();
-        Map<String,Integer> map = new TreeMap<>();  //Sorted by key
+        Map<Integer, String> map = new LinkedHashMap<>();
+        map.put(0, "A");
+        map.put(4, "Z");
+        map.put(2, "F");
+        map.put(6, "V");
 
-        map.put("A", 1);
-        map.put("Z", 10);
-        map.put("F", 17);
-        //map.put("V", 27);
+        System.out.println("LinkedHashMap: " + map + "\n");
+        map = new TreeMap<>(map);
+        System.out.println("TreeMap: " + map + "\n");
+        map = new HashMap<>(map);
+        System.out.println("HashMap: " + map + "\n");
 
+        map.remove(4);
+        System.out.println(map + "\n");
 
-        map.remove("F");
-        System.out.println(map); //{A=1, F=7, Z=10}
+        //override value for existing key
+        map.put(6, "P");
+        map.replace(0, "E");
+        System.out.println(map + "\n");
 
-        //map.put("F", 7); //override value
-        //System.out.println(map); //{A=1, F=17, Z=10}
+        if (!map.containsKey(8)) map.put(8, "N");
+        System.out.println(map + "\n");
 
-        //if (!map.containsKey("F")) map.put("F", 7);
+        //Iterating...
+        for (Map.Entry<Integer, String> e : map.entrySet()) System.out.println(e.getKey() + " : " + e.getValue());
+        System.out.println();
+        for (Integer key : map.keySet()) System.out.println(key);
+        System.out.println();
 
-        //System.out.println(map);
-
-        for (Map.Entry<String, Integer> e : map.entrySet()) {
-            System.out.println(e);
-
-            System.out.println(e.getKey());
-            System.out.println(e.getValue());
-        }
-
-        for (String key : map.keySet()) {
-            System.out.println(key);
-        }
-
-        System.out.println(map.isEmpty());
+        System.out.println("isEmpty: " + map.isEmpty());
 
         map.clear();
-        System.out.println(map);
+        System.out.println("clear: " + map + "\n");
 
     }
 }
