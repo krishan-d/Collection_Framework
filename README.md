@@ -158,7 +158,7 @@ not in any particular order. You can add or remove elements, and you can find ou
 ![collection](https://user-images.githubusercontent.com/2780145/34075655-a59a8a1c-e2f2-11e7-94d7-a49c03df0fa8.png)
 
 ## Comparable vs Comparator Interfaces :
-```html
+
 <table class="alt">
 <tbody><tr><th>Comparable</th><th>Comparator</th></tr>
 <tr><td>1) Comparable provides <strong>single sorting sequence</strong>. In other words, we can sort the collection on the basis of single element such as id or name or price etc.</td><td> Comparator provides <strong>multiple sorting sequence</strong>. In other words, we can sort the collection on the basis of multiple elements such as id, name and price etc.</td></tr>
@@ -167,7 +167,7 @@ not in any particular order. You can add or remove elements, and you can find ou
 <tr><td>4) Comparable is found in <strong>java.lang</strong> package.</td><td>Comparator is found in <strong>java.util</strong> package.</td></tr>
 <tr><td>5) We can sort the list elements of Comparable type by <strong>Collections.sort(List)</strong> method.</td><td>We can sort the list elements of Comparator type by <strong>Collections.sort(List,Comparator)</strong> method.</td></tr>
 </tbody></table>
-```
+
 ## Legacy Data Structures in Java
 
 Legacy classes and interfaces are the classes and interfaces that formed the collections' framework in the earlier
