@@ -1,4 +1,4 @@
-package com.learn.collection.map_interface;
+package com.learn.collection.concurrent_collection;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -28,7 +28,7 @@ public class ConcurrentHashMapDemo {
     * Constructors:
     * Concurrency-level: Number of segments or threads concurrently updating map.
     * Load-factor: Threshold, used to control resizing.
-    * InitialCapacity :
+    * InitialCapacity
     * */
 
     public static void main(String[] args) {
@@ -131,7 +131,6 @@ public class ConcurrentHashMapDemo {
         //or
         System.out.println();
         map4.forEach((i, s) -> System.out.println("key = " + i + " : value = " + s));
-
 
     }
 }

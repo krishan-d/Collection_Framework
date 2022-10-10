@@ -33,31 +33,47 @@ public class LearnCollectionsClass {
         Person s2 = new Person("R",3);
         System.out.println("compareTo: " + s1.compareTo(s2));
 
+        //Comparable
         Collections.sort(personList);
         System.out.println("Sorted ArrayList (comparing id member variable): " + personList);
 
         //or
         /*
-        Collections.sort(personList, new Comparator<>() {
-             @Override
-             public int compare(Person o1, Person o2) {
-                 return o1.name.compareTo(o2.name);
-             }
-        });
-        */
+        * Collections.sort(personList, new Comparator<>() {
+        *      @Override
+        *      public int compare(Person o1, Person o2) {
+        *          return o1.name.compareTo(o2.name);
+        *      }
+        * });
+        * */
 
         //or
         //Collections.sort(personList, (o1,o2) -> o1.name.compareTo(o2.name));
 
         //or
         /*
-        Collections.sort(personList, Comparator.comparing(o -> o.name));
-        System.out.println("Sorted ArrayList (comparing name member variable): " + personList);
-        */
+        * Collections.sort(personList, Comparator.comparing(o -> o.name));
+        * System.out.println("Sorted ArrayList (comparing name member variable): " + personList);
+        * */
 
         //or
-        Collections.sort(personList, new NameComparator());
-        System.out.println("Sorted ArrayList (using custom comparator): " + personList);
+        //Collections.sort(personList, new NameComparator());
+        //System.out.println("Sorted ArrayList (using custom comparator): " + personList);
+
+        //or
+        //Comparator<Person> cm1 = Comparator.comparing(Person::getId);
+        //Collections.sort(personList, cm1);
+
+        //or
+        personList.add(new Person(null, 10));
+
+        Comparator<Person> cm2 = Comparator.comparing(Person::getName, Comparator.nullsLast(String::compareTo));
+        Collections.sort(personList, cm2);
+        System.out.println(personList);
+
+        Comparator<Person> cm3 = Comparator.comparing(Person::getName, Comparator.nullsFirst(String::compareTo));
+        Collections.sort(personList, cm3);
+        System.out.println(personList);
 
     }
 }

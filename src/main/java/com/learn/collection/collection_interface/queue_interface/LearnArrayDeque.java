@@ -17,7 +17,7 @@ public class LearnArrayDeque {
         deque.offer("El 5 [Tail]");
         deque.offerFirst("El 6 [Head]");
         deque.offerLast("El 7 [Tail]");
-        System.out.println(deque + "\n");
+        System.out.println("Deque: " + deque + "\n");
 
         deque.removeFirst();
         deque.removeLast();
@@ -34,9 +34,9 @@ public class LearnArrayDeque {
         de_que.offerFirst("E6");
         de_que.offerLast("E7");
         de_que.add("E1");
-        de_que.add("E8");
+        de_que.add(null);
 
-        System.out.println(de_que + "\n");
+        System.out.println("Deque: " + de_que + "\n");
         System.out.println("pop: " + de_que.pop());
         System.out.println("poll: " + de_que.poll());
         System.out.println("pollFirst: " + de_que.pollFirst());
@@ -44,10 +44,11 @@ public class LearnArrayDeque {
 
         de_que.removeFirstOccurrence("E1");
         de_que.remove();
-        System.out.println(de_que + "\n");
+        System.out.println("Deque: " + de_que + "\n");
 
         System.out.println("Iterator...");
         for (Iterator<String> itr = de_que.iterator(); itr.hasNext();) System.out.println(itr.next());
+
         System.out.println("Descending Iterator...");
         for (Iterator<String> itr = de_que.descendingIterator(); itr.hasNext();) System.out.println(itr.next());
         System.out.println();
@@ -61,7 +62,7 @@ public class LearnArrayDeque {
             adq.offerLast(45);
             adq.add(26);
 
-            System.out.println(adq + "\n");
+            System.out.println("ArrayDeque: " + adq + "\n");
 
             System.out.println("peek: " + adq.peek());
             System.out.println("peekFirst: " + adq.peekFirst());
@@ -70,10 +71,11 @@ public class LearnArrayDeque {
             System.out.println("poll: " + adq.poll());
             System.out.println("pollFirst: " + adq.pollFirst());
             System.out.println("pollLast: " + adq.pollLast());
-            System.out.println(adq + "\n");
+
+            System.out.println("ArrayDeque: " + adq + "\n");
         }
         catch(Exception e){
-            System.out.println("Exception : " + e.getMessage());
+            e.printStackTrace();
         }
     }
 }

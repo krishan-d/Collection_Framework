@@ -11,23 +11,23 @@ public class LearnMap {
         Unique Key
 
         HashMap:
-        implement Map interface.
-        HashMap is implemented as HashTable.
-        No order is maintained[Any order] hence High performance
-        O(1) Time complexity [get, put, containsKey, remove]
-        General purpose Map
+        - implement Map interface.
+        - HashMap is implemented as HashTable.
+        - No order is maintained[Any order] hence High performance
+        - O(1) Time complexity [get, put, containsKey, remove]
+        - General purpose Map
 
         LinkedHashMap:
-        implement Map interface.
-        LinkedHashMap is implemented as a Doubly-LinkedList buckets.
-        Order in which keys were inserted into Map.
+        - implement Map interface.
+        - LinkedHashMap is implemented as a Doubly-LinkedList buckets.
+        - Maintain Order in which keys were inserted into Map.
 
         TreeMap:
-        implement Map, NavigableMap and SortedMap interface.
-        TreeMap is implemented as Red-Black Tree.
-        Iterated according to the natural order or the Comparator specified while creation.
-        O(log(n)) Time complexity [get, put, containsKey, remove]
-        No null keys
+        - implement Map, NavigableMap and SortedMap interface.
+        - TreeMap is implemented as Red-Black Tree.
+        - Iterated according to the natural order or the Comparator specified while creation.
+        - O(log(n)) Time complexity [get, put, containsKey, remove]
+        - No null keys
         */
 
         //LinkedHashMap

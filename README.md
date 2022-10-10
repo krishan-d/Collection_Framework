@@ -141,12 +141,24 @@ not in any particular order. You can add or remove elements, and you can find ou
 <tr><td>ConcurrentHashMap</td><td>Only write operations are synchronized</td><td>Segment level Lock</td><td>16 Threads perform update & n Threads read</td><td>Does not allow null key null values</td><td>Fail Safe</td><td>Multi-Threaded environment</td></tr>
 </tbody></table>
 
+## Fail Fast vs Fail Safe :
+
+<table class="alt">
+<tbody><tr><th>Base</th><th>Fail Fast Iterator</th><th>Fail Safe Iterator</th></tr>
+<tr><th>Exception</th><th>It throws a ConcurrentModificationException in modifying the object during the iteration process.</th><th>It does not throw Exception.</th></tr>
+<tr><th>Clone Object</th><th>No clone object is created during the iteration process.</th><th>A copy or clone object is created during the iteration process.</th></tr>
+<tr><th>Memory Utilization</th><th>It requires low memory during the process.</th><th>It requires more memory during the process.</th></tr>
+<tr><th>Modification</th><th>It does not allow modification during iteration.</th><th>It allows modification during the iteration process.</th></tr>
+<tr><th>Performance</th><th>It is fast.</th><th>It is slightly slower than Fail Fast.</th></tr>
+<tr><th>Example</th><th>HashMap, ArrayList, Vector, HashSet...</th><th>CopyOnWriteArrayList, ConcurrentHashMap...</th></tr>
+</tbody></table>
+
 ## Collections Framework Implementation Classes Summary :
 
 ![collection](https://user-images.githubusercontent.com/2780145/34075655-a59a8a1c-e2f2-11e7-94d7-a49c03df0fa8.png)
 
 ## Comparable vs Comparator Interfaces :
-
+```html
 <table class="alt">
 <tbody><tr><th>Comparable</th><th>Comparator</th></tr>
 <tr><td>1) Comparable provides <strong>single sorting sequence</strong>. In other words, we can sort the collection on the basis of single element such as id or name or price etc.</td><td> Comparator provides <strong>multiple sorting sequence</strong>. In other words, we can sort the collection on the basis of multiple elements such as id, name and price etc.</td></tr>
@@ -155,7 +167,7 @@ not in any particular order. You can add or remove elements, and you can find ou
 <tr><td>4) Comparable is found in <strong>java.lang</strong> package.</td><td>Comparator is found in <strong>java.util</strong> package.</td></tr>
 <tr><td>5) We can sort the list elements of Comparable type by <strong>Collections.sort(List)</strong> method.</td><td>We can sort the list elements of Comparator type by <strong>Collections.sort(List,Comparator)</strong> method.</td></tr>
 </tbody></table>
-
+```
 ## Legacy Data Structures in Java
 
 Legacy classes and interfaces are the classes and interfaces that formed the collections' framework in the earlier
