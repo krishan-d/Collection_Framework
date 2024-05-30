@@ -1,4 +1,4 @@
-package com.learn.collection.collections_class;
+package com.learn.collection.model;
 
 import java.util.Objects;
 

@@ -1,5 +1,7 @@
 package com.learn.collection.collection_interface.list_interface;
 
+import com.learn.collection.model.Employee;
+
 import java.util.*;
 
 public class ArrayListSorting {
@@ -37,6 +39,12 @@ public class ArrayListSorting {
 
         //Method referencing
         Collections.sort(empList, Comparator.comparingInt(Employee::getId));
+        // or
+        empList.sort(Comparator.comparing(Employee::getId));
+        System.out.println("Sorted by Id empList: " + empList);
+        // or
+        empList.sort(Comparator.comparing(Employee::getId).reversed());
+        System.out.println("Reversed sorted by id empList: " + empList);
 
         //Stream
         empList.stream().sorted(Comparator.comparing(Employee::getName)).forEach(System.out::println);

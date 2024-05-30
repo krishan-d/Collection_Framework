@@ -37,9 +37,10 @@ public class LearnPriorityQueue {
         //Iteration over priority queue
         for (Integer integer : pq) System.out.println(integer);
 
-        pq.remove();
-        pq.remove(36);
-        pq.poll(); //10
+        pq.remove(); // remove head - 10
+        System.out.println("\nPriority Queue: " + pq);
+        pq.remove(36); // remove - 36
+        pq.poll(); // remove new head - 12
         System.out.println("\nPriority Queue: " + pq);
 
         //Remove items from priority queue [dequeue]

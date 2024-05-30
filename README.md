@@ -2,9 +2,12 @@
 
 The java.util package contains all the classes and interfaces for Collection framework.
 
+It extends Iterable interface that adds support for iterating over collection elements using the “for-each loop” statement.
+
 **Map :**
-An object that maps keys to value. A map is not ordered and cannot contain duplicate keys (but can contain duplicate
-values). Each key can map to at most one value.
+An object that maps keys to value.
+<br />A map is not ordered and cannot contain duplicate keys (but can contain duplicate values).
+<br />Each key can map to at most one value.
 
 **Collection :**
 A collection represents a group of objects, known as its elements. The JDK provides implementations of more specific
@@ -15,19 +18,20 @@ are used to store, retrieve, manipulate and communicate aggregated [formed by th
 data.
 
 **List :**
-A list is an ordered collection of objects, where the same object may well appear more than once. For
-example: [1, 7, 1, 3, 1, 1, 1, 5]. It makes sense to talk about the "third element" in a list. You can add an element
-anywhere in the list, change an element anywhere in the list, or remove an element from any position in the list.
+A list is an ordered collection of objects, where the same object may well appear more than once. 
+<br />For example: [1, 7, 1, 3, 1, 1, 1, 5]. It makes sense to talk about the "third element" in a list.
+<br />You can add an element anywhere in the list, change an element anywhere in the list, or remove an element from any position in the list.
 
 **Queue :**
-A queue is also ordered, but you'll only ever touch elements at one end. All elements get inserted at the "end" and
-removed from the "beginning" (or head) of the queue. You can find out how many elements are in the queue, but you can't
-find out what, say, the "third" element is. You'll see it when you get there.
+A queue is also ordered, but you'll only ever touch elements at one end.
+<br />All elements get inserted at the "end" and removed from the "beginning" (or head) of the queue.
+<br />You can find out how many elements are in the queue, but you can't find out what, say, the "third" element is. You'll see it when you get there.
 
 **Set :**
-A set is not ordered and cannot contain duplicates. Any given object either is or isn't in the set. {7, 5, 3, 1} is the
-exact same set as {1, 7, 3, 5}. You again can't ask for the "third" element or even the "first" element, since they are
-not in any particular order. You can add or remove elements, and you can find out if a certain element exists.
+A set is not ordered and cannot contain duplicates.
+<br />Any given object either is or isn't in the set. {7, 5, 3, 1} is the exact same set as {1, 7, 3, 5}.
+<br />You again can't ask for the "third" element or even the "first" element, since they are not in any particular order.
+<br />You can add or remove elements, and you can find out if a certain element exists.
 
 <table class="alt">
 <tbody>
@@ -178,3 +182,10 @@ All legacy classes were re-engineered to support generic in JDK5.
 Legacy = heritage of old java version.
 
 Legacy classes and interfaces - Enumeration, Vector, Stack, Dictionary, HashTable, Properties...
+
+## Important Links
+
+[Collection Framework Reference Link](https://howtodoinjava.com/series/java-collections/)
+
+[Java Collections Advanced](https://howtodoinjava.com/java/collections/)
+

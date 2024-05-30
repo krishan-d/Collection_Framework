@@ -1,9 +1,6 @@
 package com.learn.collection.collection_interface.list_interface;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class ArrayListMethods {
 
@@ -32,7 +29,7 @@ public class ArrayListMethods {
         //retainAll():
         ArrayList<String> sToRetain = new ArrayList<>(Arrays.asList("E0", "E2", "E3"));
         arrayList.retainAll(sToRetain);
-        System.out.println("ArrayList: " + arrayList);
+        System.out.println("ArrayList post retain: " + arrayList);
 
         //get()
         String item = arrayList.get(0);  // return item at Index given
@@ -56,6 +53,10 @@ public class ArrayListMethods {
         arrayList.add("NOT NULL");
         arrayList.removeIf(Objects::isNull);
         System.out.println("ArrayList: " + arrayList);
+
+        // ArrayList.sort()
+        arrayList.sort(Comparator.reverseOrder());
+        System.out.println("ArrayList sorted: " + arrayList); // [NOT NULL, E1, E0]
 
         //ArrayList.clear()
         arrayList.clear();

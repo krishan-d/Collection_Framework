@@ -1,6 +1,6 @@
 package com.learn.collection.collection_interface.set_interface;
 
-import com.learn.collection.collections_class.Person;
+import com.learn.collection.model.Person;
 
 import java.util.*;
 

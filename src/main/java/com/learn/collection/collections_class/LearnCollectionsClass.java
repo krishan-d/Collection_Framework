@@ -1,11 +1,19 @@
 package com.learn.collection.collections_class;
 
+import com.learn.collection.model.Person;
+
 import java.util.*;
 
 public class LearnCollectionsClass {
     public static void main(String[] args) {
 
-		List<Integer> sList = new ArrayList<>(Arrays.asList(1, -1, 0, 2, -2));
+        /*
+          This class consists exclusively of static methods that operate on or return collections.
+          It contains polymorphic algorithms that operate on collections, "wrappers",
+          which return a new collection backed by a specified collection, and a few other odds and ends.
+         */
+
+        List<Integer> sList = new ArrayList<>(Arrays.asList(1, -1, 0, 2, -2));
 		sList.add(4);
 
         System.out.println("ArrayList: " + sList + "\n");

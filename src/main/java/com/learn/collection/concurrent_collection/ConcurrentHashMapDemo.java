@@ -113,7 +113,7 @@ public class ConcurrentHashMapDemo {
         /*
         * Iterator<Map.Entry<Integer, String>> iterator = map4.entrySet().iterator();
         * while (iterator.hasNext()) {
-        *     Map.Entry<Integer, String> entry = iterator.next();
+        *     Map.Entry<Integer, String> entry = iterator.next  ();
         *     System.out.println("key = " + entry.getKey() + " : value = " + entry.getValue());
         * }
         * */

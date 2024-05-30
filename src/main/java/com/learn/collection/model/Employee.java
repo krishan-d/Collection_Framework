@@ -1,4 +1,4 @@
-package com.learn.collection.collection_interface.list_interface;
+package com.learn.collection.model;
 
 public class Employee {
     private String name;

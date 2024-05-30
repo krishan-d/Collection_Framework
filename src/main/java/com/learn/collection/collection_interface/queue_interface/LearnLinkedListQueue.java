@@ -16,9 +16,9 @@ public class LearnLinkedListQueue {
         queue.add(null);
         queue.add(4);
 
-        System.out.println("Queue: " + queue);
+        System.out.println("Queue: " + queue); // [1, 2, 10, 10, null, 4]
 
-        queue.poll(); // 1
+        queue.poll(); // 1 - Removes peek element
         queue.remove(); // 2
         queue.remove(22); // This element does not exist in queue
 

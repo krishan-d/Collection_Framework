@@ -1,4 +1,6 @@
-package com.learn.collection.collections_class;
+package com.learn.collection.services;
+
+import com.learn.collection.model.Person;
 
 import java.util.Comparator;
 

@@ -1,5 +1,7 @@
 package com.learn.collection.collection_interface.list_interface;
 
+import com.learn.collection.model.Employee;
+
 import java.util.*;
 
 public class ArrayListBasics {
